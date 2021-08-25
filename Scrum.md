@@ -9,13 +9,13 @@ trabalho.
 ## 1 - Papéis
  
 ### Dono do produto (PO)
-O Dono do Produto tem o propriedade sobre as tomadas de decisões sobre o produto a ser desenvolvido. Deve-se entender o domínio do sistema a ser construído. Sendo responsável por definir as funções do produto, priorizando funções com base no valor do negócio, ajustando as funções e prioridades de cada Sprint conforme necessário, garantindo a clareza das histórias de usuários e sempre respondendo às dúvidas da equipe para maximizar o retorno do investimento do Projeto.
+O dono do produto definido neste projeto é o Daniel Moraes dos Santos. Ele tem propriedade sobre as tomadas de decisões sobre o produto e  entende o domínio do sistema que será construído. Sendo responsável por definir as funções do produto, e priorizar funções com base no valor do negócio, ajustar as funções e prioridades de cada Sprint conforme necessário, garantir a clareza das histórias de usuários e sempre responder às dúvidas da equipe para maximizar o retorno do investimento do Projeto.
  
 ### Scrum master (SM)
-O Scrum Master é o líder da equipe Scrum, responsável por apoiar o projeto e fornecer orientação à equipe e proprietários de negócios para garantir que todas as práticas sejam seguidas. Este é o Scrum Expert da equipe, responsável por garantir que as regras do método sejam seguidas. Para isso, ele deve treinar e explicar continuamente os princípios do Scrum para outros membros da equipe. Ele também deve desempenhar o papel de facilitador e remover de obstáculos.
+O Scrum Master, líder da equipe Scrum, neste projeto é  Enzo Cunha do Nascimento responsável por apoiar o projeto e fornecer orientação à equipe e proprietários de negócios para garantir que todas as práticas sejam seguidas. Ele é o Scrum Expert da equipe, responsável por garantir que as regras do método sejam seguidas. Para isso, ele deve treinar e explicar continuamente os princípios do Scrum para outros membros da equipe. Sendo também um facilitador e removedor de obstáculos.
  
 ### Developer (DEV)
-Os desenvolvedores no Scrum são os membros do projeto que possuem as habilidades certas para fazer parte da equipe e concluir o trabalho. Neste projeto os desenvolvedores, inclui desenvolvedores de back-end, desenvolvedores de front-end, especialistas em banco de dados e designers de interface. A responsabilidade desses especialistas é entregar trabalho durante todo o sprint, garantir transparência durante o sprint e tomar todas as decisões técnicas para o projeto, incluindo a definição da linguagem de programação, arquitetura e estrutura que serão usados ​​no desenvolvimento.
+O desenvolvedor no Scrum, neste projeto é Amanda Barbosa Morais, ela possui as habilidades certas para fazer parte da equipe e concluir o trabalho. Sendo um desenvolvedor full stack, capaz de trabalhar com toda pilha de desenvolvimento do projeto, tanto a parte de front-end e criação de interface, quanto de back-end e sua integração com banco de dados. Ela é responsável por entregar o trabalho durante todo o sprint, garantir transparência durante o sprint e tomar todas as decisões técnicas para o projeto, incluindo a definição da linguagem de programação, arquitetura e estrutura que serão usados ​​no desenvolvimento.
  
  
 ## 2 - Artefatos
@@ -81,4 +81,3 @@ que participaram da sprint.
  
 Acontecerá no último dia da sprint, às 15h por meio virtual.
  
-
