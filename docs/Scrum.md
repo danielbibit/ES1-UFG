@@ -39,7 +39,8 @@ Vai ser um documento contendo uma lista de histórias do produto, que constitui 
 que devemos implementar em nosso produto. Trata-se de um documento dinâmico, à medida que o projeto
 avançar e identificarmos falhas e melhorias, o backlog deve ser modificado.
  
-Esse documento vai ficar hospedado no github, e é papel do dono do produto atualizar esse documento
+Esse documento vai ficar hospedado no github, como um projeto, e é papel do dono do produto 
+atualizar esse documento.
  
 ### 2.2 Backlog da sprint
 É o documento gerado ao fim da sprint, contendo as tarefas a serem realizadas nessa sprint. Também
@@ -47,15 +48,15 @@ trata-se de um documento dinâmico, isso é, ao decorrer da sprint, podemos modi
 incluir ou modificar alguma coisa que foi prevista para esse sprint. Mas não devemos alterar o
 objetivo da sprint, isso é, as histórias selecionadas para serem implementadas.
  
-Esse documento vai ficar hosteado no github, e sempre será gerado um novo para cada sprint.
-É papel do time de desenvolvimento atualizar esse documento.
+Esse documento vai ficar hosteado no github, como um projeto, e sempre será gerado um novo para 
+cada sprint. É papel do time de desenvolvimento atualizar esse documento.
  
 ### 2.3 Quadro scrum
 O quadro scrum é a ferramenta que auxilia a visualização das histórias escolhidas para sprint, é 
 um quadro de visuliazação do backlog da sprint. O quadro deve ficar acessivel à todos da equipe, e 
 não se trata de um artefato estático, deve ser icentividado que todos da equipe o manipule e atualize.
 
-O quadro será dividido nas seguintes colunas: Histórias; A fazer; Em progresso; Feito e Em teste.
+O quadro será dividido nas seguintes colunas: Backlog sprint; A fazer; Em progresso; Feit.
  
 ## 3 - Eventos
 ### 3.1 - Planejamento da sprint
