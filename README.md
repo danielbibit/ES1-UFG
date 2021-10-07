@@ -1,5 +1,7 @@
 # Sistema de vendas de picolé :icecream:
 
+![Django Build](https://github.com/danielbibit/ES1-UFG/actions/workflows/django.yml/badge.svg)
+
 Esse é um projeto de software para a disciplina de Engenharia de Software na UFG.
 
 Trata-se de um projeto para desenvolver uma aplicação exemplo, utilizando um processo
