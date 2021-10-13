@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from sistema_picole.sistema_venda import views as sistema_venda_views
+from sistema_picole.landing_page import views as landing_page_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('sistema/', sistema_venda_views.index),
+    path('', landing_page_views.index)
+
 ]
