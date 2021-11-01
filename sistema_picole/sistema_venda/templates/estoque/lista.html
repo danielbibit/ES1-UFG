@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}Controle Estoque{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <h1>Controle Estoque</h1>
+    <div class="container dashboard">
+        <div class="col-4 dashboard-box" id="dashboard-lastdays">
+            <h4>Produtos com estoque inferior a 2 lotes</h4>
+            <span>{{ tasksrecently }}</span>
+        </div>
+        <div class="col-4 dashboard-box" id="dashboard-done">
+            <h4>Produtos proximos do vencimento</h4>
+            <span>{{ tasksdone }}</span>
+        </div>
+        <div class="col-4 dashboard-box" id="dashboard-doing">
+            <h4>Produtos vencidos</h4>
+            <span>{{ tasksdoing }}</span>
+        </div>
+    </div>
+    <a id="add-link" href="adiciona_estoque/">
+        <div class="col-2 add-div">
+            <i class="fas fa-plus"></i> Adicionar lote
+        </div>
+    </a>
+    <div class="col-9 search-div">
+        <form method="GET" id="search-form">
+            <input class="form-control" type="text" id="search" name="search" placeholder="Digite o nome da tarefa para buscar..." value="{{ request.GET.search }}">
+            <i class="fas fa-search" id="search-btn"></i>
+        </form>
+    </div>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Lote</th>
+            <th scope="col">Estoque</th>
+            <th scope="col">Data Compra</th>
+            <th scope="col">Data Validade</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Preço Lote</th>
+            <th scope="col">marca</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for lote in lotes %}
+          <tr>
+            <th scope="row">{{lote.id}}</th>
+            <td>{{lote.estoque}}</td>
+            <td>{{lote.data_compra}}</td>
+            <td>{{lote.data_validade}}</td>
+            <td>{{lote.quantidade_picoles}}</td>
+            <td>{{lote.preco_lote}}</td>
+            {% for picole in picoles %}
+                {% if lote.picole.id == picole.id %}
+                    <td>{{picole.marca}}</td>
+                {% endif %}
+            {% endfor %}
+            <td>
+                <a href="delete/{{lote.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a>
+                <a href="edit/{{lote.id}}"><span><i class="fas fa-edit"></i></span></a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    <div class="pagination">
+        <span class="step-links">
+            {% if tasks.has_previous %}
+                <a href="?page={{ tasks.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+            {% endif %}
+            
+            {% if tasks.paginator.num_pages %}
+            <span class="current">
+                {{ tasks.number }} de {{ tasks.paginator.num_pages }}
+            </span>
+            {% endif %}
+        
+            {% if tasks.has_next %}
+                <a href="?page={{ tasks.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+{% endblock %}
