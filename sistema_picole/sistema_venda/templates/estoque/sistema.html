@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Controle Estoque{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <div style="margin-bottom: 36%;">
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card border-success ">
+                <div class="card-body">
+                  <h5 class="card-title">Sistema de Vendas</h5>
+                  <p class="card-text">Caixa e Controle.</p>
+                  <a href="vendas/" class="btn btn-success">Vendas</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card border-danger">
+                <div class="card-body">
+                  <h5 class="card-title">Sistemas de Estoque</h5>
+                  <p class="card-text">Controle do Estoque.</p>
+                  <a href="estoque/" class="btn btn-danger">Estoque</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

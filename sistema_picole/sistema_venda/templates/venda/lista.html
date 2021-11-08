@@ -4,29 +4,10 @@
 
 {% block content %}
 <div class="offset-1 col-10 list-div">
-    <h1>Controle Estoque</h1>
-    <div class="container dashboard">
-        <div class="col-4 dashboard-box" id="dashboard-lastdays">
-            <h4>Produtos com quantidade menor que 30</h4>
-            <span>{{ tasksrecently }}</span>
-        </div>
-        <div class="col-4 dashboard-box" id="dashboard-done">
-            <h4>Lotes proximos da Validade</h4>
-            <span>{{ tasksdone }}</span>
-        </div>
-        <div class="col-4 dashboard-box" id="dashboard-doing">
-            <h4>Lotes Vencidos</h4>
-            <span>{{ tasksdoing }}</span>
-        </div>
-    </div>
+    <h1>Controle de Vendas</h1>
     <a id="add-link" href="adiciona_lote/">
         <div class="col-2 add-div">
-            <i class="fas fa-plus"></i> Adicionar lote
-        </div>
-    </a>
-    <a id="add-link" href="adiciona_picole/">
-        <div class="col-2 add-div">
-            <i class="fas fa-plus"></i> Adicionar picole
+            <i class="fas fa-plus"></i> Nova Venda
         </div>
     </a>
     <div class="col-7 search-div">
@@ -45,33 +26,37 @@
     <table class="table">
         <thead>
           <tr>
+            <th scope="col">Venda</th>
+            <th scope="col">Horario</th>
+            <th scope="col">Preco</th>
+            <th scope="col">Local</th>
+            <th scope="col">Metodo Pagamento</th>
             <th scope="col">Lote</th>
-            <th scope="col">Estoque</th>
-            <th scope="col">Data Compra</th>
-            <th scope="col">Data Validade</th>
-            <th scope="col">Quantidade</th>
-            <th scope="col">Preço Lote</th>
-            <th scope="col">marca</th>
+            <th scope="col">Tipo Picolé</th>
             <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          {% for lote in lotes %}
+          {% for venda in vendas %}
           <tr>
-            <th scope="row">{{lote.id}}</th>
-            <td>{{lote.estoque}}</td>
-            <td>{{lote.data_compra}}</td>
-            <td>{{lote.data_validade}}</td>
-            <td>{{lote.quantidade_picoles}}</td>
-            <td>{{lote.preco_lote}}</td>
+            <th scope="row">{{venda.id}}</th>
+            <td>{{venda.horario}}</td>
+            <td>{{venda.preco}}</td>
+            <td>{{venda.local}}</td>
+            <td>{{venda.metodo_pagamento}}</td>
+            {% for lote in lotes %}
+                {% if venda.lote.id == lotes.id %}
+                    <td>{{lote.id}}</td>
+                {% endif %}
+            {% endfor %}
+            <td>
             {% for picole in picoles %}
-                {% if lote.picole.id == picole.id %}
+                {% if venda.picole.id == picole.id %}
                     <td>{{picole.marca}}</td>
                 {% endif %}
             {% endfor %}
             <td>
-                <a href="delete/{{lote.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a>
-                <a href="edit/{{lote.id}}"><span><i class="fas fa-edit"></i></span></a>
+                <a href="edit/{{lote.id}}"><span><i class="fas fa-eye"></i></i></span></a>
             </td>
           </tr>
           {% endfor %}

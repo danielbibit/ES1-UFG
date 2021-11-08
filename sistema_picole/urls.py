@@ -22,9 +22,11 @@ from sistema_picole.sistema_venda import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('estoque/<int:id>', views.estoque),
-    path('edit/<int:id>', views.edit_estoque),
-    path('adiciona_estoque/', views.adiciona_estoque),
+    path('sistema/edit/<int:id>', views.edit_estoque),
+    path('sistema/adiciona_picole/', views.adiciona_picole),
+    path('sistema/adiciona_lote/', views.adiciona_lote),
+    path('sistema/vendas/', views.venda),
+    path('sistema/estoque/', views.estoque),
     path('sistema/', sistema_venda_views.index),
     path('', landing_page_views.index)
 

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sistema_picole.sistema_venda.apps.SistemaVendaConfig',
-    'sistema_picole.landing_page.apps.LandingPageConfig'
+    'sistema_picole.landing_page.apps.LandingPageConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
