@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{task.title}}{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div" style="margin-left: 40%;">
+    <h1>Editando Estoque</h1>
+    <form method="POST" tyle="margin-top: 3%;">
+        <fieldset class="border p-3" style="width: 30%;align-items: center;">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" class="btn btn-success" value="Editar Lote" style="margin-top: 10px;">
+        </fieldset>
+    </form>
+</div>
+{% endblock %}
