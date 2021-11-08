@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{task.title}}{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div" style="margin-left: 40%;margin-bottom: 10%;">
+    <h1>Venda</h1>
+    <form method="POST" tyle="margin-top: 3%; "  disabled="">
+        <fieldset class="border p-3" style="width: 30%;align-items: center;">
+            {% csrf_token %}
+            {{ form|crispy }}
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

@@ -5,10 +5,10 @@
 
 {% block content %}
 <div class="offset-1 col-10 list-div" style="margin-left: 40%;">
-    <h1>Adicione o Lote:</h1>
+    <h1>Novo Venda</h1>
     <form method="POST" style="margin-top: 3%;">
         <fieldset class="border p-3" style="width: 30%;align-items: center;" >
-            <legend class="w-auto">Lote</legend>
+            <legend class="w-auto">Venda</legend>
             {% csrf_token %}
             {{ form|crispy }}
             <input type="submit" class="btn btn-success" value="Criar Lote" style="margin-top: 10px;">
